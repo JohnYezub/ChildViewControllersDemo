@@ -53,7 +53,7 @@ class ContainerViewController: UIViewController, TopDelegate {
     func showBottom(shouldMove: Bool) {
         if shouldMove {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-                //self.topVC.view.frame.origin.x  = self.topVC.view.frame.width - 200
+                
                 self.topVC.view.frame = CGRect(x: self.topVC.view.frame.width - 200, y: self.topVC.view.frame.origin.y, width: self.topVC.view.frame.width, height: self.topVC.view.frame.height / 2)
             }) { (finished) in
                 
