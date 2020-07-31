@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 // ContainerViewController init via SceneDelegate
 class ContainerViewController: UIViewController, TopDelegate {
     func toggle() {
@@ -28,12 +29,16 @@ class ContainerViewController: UIViewController, TopDelegate {
         // Do any additional setup after loading the view.
     }
 
+    //MARK: - Setup TopViewController via StoryBoard
+    
     func configureTop() {
         let top = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! TopViewController
         top.delegate = self
         topVC = top
         addVC(topVC)
     }
+    
+      //MARK: - Setup BottomViewController via Code
     
     func configureBottom() {
         if bottomVC == nil {
